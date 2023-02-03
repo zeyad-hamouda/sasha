@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mid-project</title>
+    <link rel = "stylesheet" type = "text/css" href = "styles.css"/>
+    <link rel="preconnect" href="https:fonts.gstactic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            /* by default this hides all the tab-content div elements except for the first element*/
+            $(".content .tab_content").hide();
+            $(".content .tab_content:first-child").show();
+
+            /* when any li(tab) is clicked, add the active class to the clicked
+            li(tab) and remove the active class to remaining li(tab) elements*/
+            $("ul li").click(function(){
+
+                $("ul li").removeClass("active");
+                $(this).addClass("active");
+
+                /*Get the attribute value of the clicked li(tab) and show the tab
+                content div element which matches the attribute value and hide the
+                remaining tab content div elements*/
+                var current_tab_value = $(this).attr("data-list");
+                $(".content .tab_content").hide();
+                $("."+current_tab_value).show();
+
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <!--<div onclick="window.location.href=';'" class="courses">-->
+    <div id="courses-inner">
+        <div class="coursess">
+            <div class="left-side">
+                    <img class="course-img" src="law.jpeg" alt="AI_img">
+                        <div class="course_head">
+                                <h2 class="c-name">Bachelor of Law</h2>
+                        </div>
+                        <div class="course_button">
+                            <a href="#" class="btnc">Bachelor programme</a>
+                        </div>
+                        <h4 class="hfour"><span>Last updated:</span> 2 February, 2023</h4>
+                        <div class="wrapper">
+                        <div class="tabs">
+                            <ul>
+                                <li class="active" data-list="tab_1"><p>Overview</p></li>
+                                <li data-list="tab_2"><p>Entry Requirements</p></li>
+                                <li data-list="tab_3"><p>Module descriptor</p></li>
+                                <li data-list="tab_4"><p>Programme strucutre</p></li>
+                                <li data-list="tab_5"><p>Credit transfer</p></li>
+                                <li data-list="tab_6"><p>Fees</p></li>
+                            </ul>
+                        </div>
+                        <div class="content">
+                            <div class="tab_content tab_1">
+                                <h4 class="hfour">Why study Bachelor of Law</h4>
+                                <p class="para">The Bachelor of Law is designed to prepare students for a career in law and in the 
+                                    legal areas of public and private sector organisations. It also opens opportunities for 
+                                    future graduate study. The programme offers a balanced variety of specialist modules 
+                                    covering civil law, procedural law, commercial law, criminal law, administrative law, 
+                                    and public international law amongst other legal disciplines. Students will have the 
+                                    opportunity to develop the skills needed to succeed within the highly competitive 
+                                    legal profession.</p>
+                                <h4 class="hfour">Learning Outcomes</h4>
+                                <h5 class="hfive">Knowledge</h5>
+                                <ul>
+                                    <li class="LI">Gain knowledge and understanding of key concepts related to English and the use of computers.</li>
+                                    <li class="LI">Develop an understanding of citizenship through the transfer of knowledge relating to humanities and social sciences issues and challenges.</li>
+                                </ul>
+                                <h5 class="hfive">Skills</h5>
+                                <ul>
+                                    <li class="LI">Be able to exercise cognitive skills such as argument, logic and reasoning in order to enhance the breadth and diversity of student’s intellectual experience.</li>
+                                    <li class="LI">Be able to critically analyse and evaluate different ideas and information and make decisions based on scientific, quantitative and critical reasoning.</li>
+                                </ul>
+                            </div>
+                            <div class="tab_content tab_2">
+                                <table class="table-2">
+                                    <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>High School GPA</th>
+                                        <th>Arabic Language</th>
+                                        <th>Mathematics</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>Sabis curriculum</td>
+                                        <td>Minimum overall average of 75%</td>
+                                        <td>EmSAT Arabic score 800</td>
+                                        <td>EmSAT Math score 800</td>
+                                    </tr>
+                                    <tr>
+                                        <td>International Baccalaureate (IB)</td>
+                                        <td>Must complete any six subjects (at least three HL subjects) 
+                                            IB diploma with minimum score of 24 points, exclusive of any bonus points</td>
+                                        <td>EmSAT 800 or Zero-Credit Basic Arabic Language Course(Pass BUiD Arabic Langauge Placement Test)</td>
+                                        <td>EmSAT 800 or 4 in HL or SI Math or study zero credit course</td>
+                                    </tr>
+                                    <tr>
+                                        <td>American curriculum</td>
+                                        <td>Minimum overall average of 80%</td>
+                                        <td>EmSAT 800 or Zero-Credit Basic Arabic Language Course(Pass BUiD Arabic Langauge Placement Test)</td>
+                                        <td>EmSAT Math score 800 or SAT score 450</td>
+                                    </tr>
+                                    <tr>
+                                        <td>British curriculum (GCE/IGCSE)</td>
+                                        <td>Total of seven subjects, five at (O level) and two at (AS/A level), with a
+                                            minimum grade of D in all subjects. Arabic Language and Islamic Education are not counted.</td>
+                                        <td>EmSAT 800 or Zero-Credit Basic Arabic Language Course(Pass BUiD Arabic Langauge Placement Test)</td>
+                                        <td>EmSAT 800 or AS/A Level Minimum D</td>
+                                    </tr>
+                                    <tr>
+                                            <td colspan="3">EmSAT English 1100 or IELTS 5.0 overall or TOEFL 61 iBT or equivalent.
+                                            All applicants must pass personal interview. For more information please click here: 
+                                            <a class="Eng" href="English Language Requirements.png" target="_blank">English Language Requirements</a></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tab_content tab_3">
+                                <h5 class="hfive">Introduction to Law</h5>
+                                <p class="para">This is an introductory module that introduces students to the legal systems and the main branches of law. 
+                                    Furthermore, it provides a general introduction on the theory of legal right, the sources of law, the types 
+                                    of legal rules, and the process by which newly enacted laws come into force. It is intended to explain and 
+                                    discuss the relevant main topics under both UAE law and English law (to the extent applicable in the UAE).</p>
+                                <h5 class="hfive">Principle of Commercial Law</h5>
+                                <p class="para">This module introduces students to principles of commercial law and familiarises them with the framework 
+                                    and mechanisms of commercial law. The modules covers the legal framework of commercial law and the application 
+                                    of fundamental principles to business transactions in the domestic and international sphere, including the nature 
+                                    and sources of commercial law; sale of goods; law of agency; UAE Commercial Agencies Law No. 18 of 1981; and the 
+                                    UAE Commercial Transactions Law.</p>
+                                <h5 class="hfive">Constitutional Law</h5>
+                                <p class="para">This module aims to introduce students to constitutional processes by which the relationship between the individual 
+                                    and the state and the relationship between the organs of the state are regulated. The module covers types of constitutions, 
+                                    essence of constitutions, sources of constitutional rules, the place of constitutional law in the legal system, conceptions 
+                                    of the state, constitution-making as a process, systems of government (eg presidentialism, parliamentarism), the rule of law, 
+                                    the separation of powers, checks and balances, and citizenship.</p>
+                                <h5 class="hfive">Adminstrative Law</h5>
+                                <p class="para">This module covers topics related to the relation between the government and its employees. It deals also with 
+                                    administrative contracts, good governance, means of administrative governance, and the relationship between local governments 
+                                    and the federal government. It is intended to explain and discuss the relevant main topics under both UAE law and English law 
+                                    (to the extent applicable in the UAE).</p>
+                                <h5 class="hfive">Rules of Obligation</h5>
+                                <p class="para">This module covers the execution of legal rights whether discretionary or obligatory. It deals with conditional obligations 
+                                    and time of performance. It also covers descriptions and modalities, obligation transmission, right and debt assignment. 
+                                    It is intended to consider these topics under both UAE law and English law (to the extent applicable in the UAE).</p>
+                            </div>
+                            <div class="tab_content tab_4">
+                                <table class="table_4">
+                                    <thead>
+                                    <tr>
+                                        <th>Year</th>
+                                        <th colspan="2">Term 1</th>
+                                        <th colspan="2">Term 2</th>
+                                        <th colspan="2">Term 3</th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                        <th>Total</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr rowspan="2">
+                                        <td>Yr</td>
+                                        <td>Module code</td>
+                                        <td>Module Name</td>
+                                        <td>Cr</td>
+                                        <td>Module code</td>
+                                        <td>Module Name</td>
+                                        <td>Cr</td>
+                                        <td>Module code</td>
+                                        <td>Module Name</td>
+                                        <td>Cr</td>
+                                        <td>Total <br> Cr</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="5">1</td>
+                                        <tr>
+                                            <td>SOC101</td>
+                                            <td>Introduction to Comparative Politics and Government</td>
+                                            <td>10</td>
+                                            <td>ENG102</td>
+                                            <td>English 2</td>
+                                            <td>10</td>
+                                            <td>ISLM101</td>
+                                            <td>Islamic Values</td>
+                                            <td>10</td>
+                                            <td rowspan="5">120</td>
+                                        </tr>
+                                        <tr>
+                                            <td>PHIL101</td>
+                                            <td>Introduction to Philosophy</td>
+                                            <td>10</td>
+                                            <td>STAT101</td>
+                                            <td>Introduction to Statistics</td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td>Legal Research Methods</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>IT101</td>
+                                            <td>Introduction to Computers</td>
+                                            <td>10</td>
+                                            <td>SOC102</td>
+                                            <td>Diversity and Multiculturalism</td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td>Introduction to Law</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ENG101</td>
+                                            <td>English 1</td>
+                                            <td>10</td>
+                                            <td>ARCH103</td>
+                                            <td>Environment Sciences and Sustainability</td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td>Principles of Commercial Law</td>
+                                            <td>10</td>
+                                        </tr>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="5">2</td>
+                                        <tr>
+                                            <td></td>
+                                            <td>Sources of Obligation(1)</td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td>Introduction Technology Law</td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td>Rules of Obligation</td>
+                                            <td>10</td>
+                                            <td rowspan="5">120</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>Criminal Law: Genreal Part</td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td>Sources of Obligation(2)</td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td>International Organisations</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>Constitutional Law</td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td>Family Law</td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td>Company Law & Bankruptcy</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>Adminstrative Law</td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td>Public International Law</td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td>Crimes against persons</td>
+                                            <td>10</td>
+                                        </tr>
+                                    </tr>
+                                    <tr></tr>
+                                    <tr>
+                                        <td rowspan="6">3</td>
+                                        <tr>
+                                            <td></td>
+                                            <td>Public Finance & Tax Law</td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td>Meida Law</td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td>Construction & Agency Contacts</td>
+                                            <td>10</td>
+                                            <td rowspan="5">120</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>Labour Law</td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td>Maritime Law</td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td>Personal and Real Securities</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>Commercial Papers & Banking Transactions</td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td>Right in Rem</td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td>intellectual Property Law</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>Crimes against Property</td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td>Sales & Rent Contracts</td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td>Consumer Protection Law</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="9">16 weeks Internship</td>
+                                        </tr>
+                                    </tr>
+                                    <tr></tr>
+                                    <tr>
+                                        <td rowspan="5">4</td>
+                                        <tr>
+                                            <td></td>
+                                            <td>Human Rights in the International Law</td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td>Civil Procedures</td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td>Arbitration Law</td>
+                                            <td>10</td>
+                                            <td rowspan="5">120</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>Law of Evidence</td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td>Criminal Procedures</td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td>Execution Procedures</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>Insurance Law</td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td>Law of Investment</td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td>Private International Law</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>Emerging Crimes</td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td>Legal Practice Training</td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td>Graduation Research Project</td>
+                                            <td>10</td>
+                                        </tr>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tab_content tab_5">
+                                <ul>
+                                    <li class="LI">HAWK does not normally award credit for experiential learning.</li>
+                                    <li class="LI">HAWK does consider credit transfer arrangements towards their undergraduate programmes from other higher education institutions subject to the following conditions.</li>
+                                    <li class="LI">The applicant meets HAWK’s formal entry requirements.</li>
+                                    <li class="LI">The relevant Faculty is able to determine that the coursework was taken at undergraduate level and is at least equivalent to the credit rating available for one module of the programme for which the credit transfer is being considered.</li>
+                                    <li class="LI">The student attained a minimum GPA of 2.0 on a 4.0 scale or equivalent for the credit of a module to be transferred.</li>
+                                    <li class="LI">The institution at which the programme was taken is recognised by the Ministry of Education or licensed or officially recognised by the Department/Ministry of Education in the home country (and so attestable by the Ministry of Education)</li>
+                                    <li class="LI">The Faculty only allows exemptions from modules with content equivalent to that qualification providing the transferable points.</li>
+                                    <li class="LI">Credit points can only be transferred where the work done for the previous qualification would allow the student to successfully perform the assessment exercise for the exempted module.</li>
+                                    <li class="LI">The decision as to whether a previously taken qualification or credit accumulation serves to exempt a student from a current module rests with the Board of Examiners on the recommendation of the Dean of the Faculty.</li>
+                                </ul>
+                            </div>
+                            <div class="tab_content tab_6">
+                                <h5 class="scholar">Scholarships up to 50% - for more details visit scholarships</h5>
+                                <br>
+                                <table class="table_6">
+                                    <thead>
+                                    <tr>
+                                        <th>Bachelor Programme</th>
+                                        <th>Tuition fees per year</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>Bachelor of Law</td>
+                                        <td>£ 20000</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="right-side">
+                    <h3>This course includes:</h3>
+                    <p><i class="fa-regular fa-clock"></i> 10 credit hours</p>
+                    <p><i class="fa-solid fa-floppy-disk"></i> Downloadable resources</p>
+                    <p><i class="fa-regular fa-calendar-xmark"></i> Full access till end of course</p>
+                    <p><i class="fa-solid fa-rectangle-list"></i> Assignments and projects</p>
+                    <p><i class="fa-brands fa-square-gitlab"></i> Practicals</p>
+                    <p><i class="fa-solid fa-note-sticky"></i> Quizzes and Exams</p>
+                    <p><i class="fa-solid fa-star"></i> Certificate of completion</p>
+                    <div class="enroll-btn">
+                        <a class="enrolling" href="#"> Enroll Course</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

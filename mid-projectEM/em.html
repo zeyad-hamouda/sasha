@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mid-project</title>
+    <link rel = "stylesheet" type = "text/css" href = "styles.css"/>
+    <link rel="preconnect" href="https:fonts.gstactic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            /* by default this hides all the tab-content div elements except for the first element*/
+            $(".content .tab_content").hide();
+            $(".content .tab_content:first-child").show();
+
+            /* when any li(tab) is clicked, add the active class to the clicked
+            li(tab) and remove the active class to remaining li(tab) elements*/
+            $("ul li").click(function(){
+
+                $("ul li").removeClass("active");
+                $(this).addClass("active");
+
+                /*Get the attribute value of the clicked li(tab) and show the tab
+                content div element which matches the attribute value and hide the
+                remaining tab content div elements*/
+                var current_tab_value = $(this).attr("data-list");
+                $(".content .tab_content").hide();
+                $("."+current_tab_value).show();
+
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <!--<div onclick="window.location.href=';'" class="courses">-->
+    <div id="courses-inner">
+        <div class="coursess">
+            <div class="left-side">
+                    <img class="course-img" src="Em.jpeg" alt="AI_img">
+                        <div class="course_head">
+                                <h2 class="c-name">Bachelor of Science in Eectro-Mechanical Engineering</h2>
+                        </div>
+                        <div class="course_button">
+                            <a href="#" class="btnc">Bachelor programme</a>
+                        </div>
+                        <h4 class="hfour"><span>Last updated:</span> 2 February, 2023</h4>
+                        <div class="wrapper">
+                        <div class="tabs">
+                            <ul>
+                                <li class="active" data-list="tab_1"><p>Overview</p></li>
+                                <li data-list="tab_2"><p>Entry Requirements</p></li>
+                                <li data-list="tab_3"><p>Module descriptor</p></li>
+                                <li data-list="tab_4"><p>Programme strucutre</p></li>
+                                <li data-list="tab_5"><p>Credit transfer</p></li>
+                                <li data-list="tab_6"><p>Fees</p></li>
+                            </ul>
+                        </div>
+                        <div class="content">
+                            <div class="tab_content tab_1">
+                                <h4 class="hfour">Why study Bachelor Degree in Electro-Mechanical Engineering</h4>
+                                <p class="para">BUiD’s Bachelor Degree in(BSc.) Electro-Mechanical Engineering addresses the needs of the region in the industrial, 
+                                    manufacturing, airline, shipping, service and governmental sector. Graduates of this programme will be equipped with 
+                                    a wide set of relevant knowledge and skills preparing them for an employment market with very diverse needs. 
+                                    Owing to the integrated nature and interconnected dependency of components and sub-assemblies comprising electro-mechanical systems, 
+                                    the analysis, design and maintenance of these devices is no longer due to the simple application of either mechanical, electrical or 
+                                    electronic technology. Instead, combinations of the skills central to all of these disciplines are needed.</p>
+                                <h4 class="hfour">Learning Outcomes</h4>
+                                <h5 class="hfive">Knowledge</h5>
+                                <ul>
+                                    <li class="LI">Acquire knowledge of mathematics, statistics, and engineering-related sciences required to model and solve real life electro-mechanical engineering problems</li>
+                                    <li class="LI">Gain knowledge of electro-mechanical components and systems involving people, materials, equipment, information, and energy.</li>
+                                    <li class="LI">Acquire knowledge of the design, conduct and analysis of experiments in a scientific and systemic way in order to identify the optimum running conditions for such systems.</li>
+                                    <li class="LI">Identify, formulate and optimise operations and service systems based on objective performance engineering functions and  constraints.</li>
+                                </ul>
+                                <h5 class="hfive">Skills</h5>
+                                <ul>
+                                    <li class="LI">Use modern tools to analyse, improve, and optimise engineering systems.</li>
+                                    <li class="LI">Realise performance measurement of real systems by identifying feasible performance indicators and methods of assessment.</li>
+                                </ul>
+                            </div>
+                            <div class="tab_content tab_2">
+                                <table class="table-2">
+                                    <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>High School GPA</th>
+                                        <th>Arabic Languages</th>
+                                        <th>Mathematics</th>
+                                        <th>Physics</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>Sabis curriculum</td>
+                                        <td>Minimum overall average of 70%</td>
+                                        <td>EMSAT 600 or Zero-Credit Basic Arabic Language Course (Pass BUiD Arabic Language Placement Test)</td>
+                                        <td>EmSAT Math score 900</td>
+                                        <td>EmSAT physics score 800</td>
+                                    </tr>
+                                    <tr>
+                                        <td>International Baccalaureate (IB)</td>
+                                        <td>IB diploma with minimum score of 24 points, exclusive of any bonus points</td>
+                                        <td>EMSAT 600 or Zero-Credit Basic Arabic Language Course (Pass BUiD Arabic Language Placement Test)</td>
+                                        <td>EmSAT Math score 900 or Minimum 4 in HL Mathematics</td>
+                                        <td>EmSAT physics score 800 or Minimum 3 in HL Physics</td>
+                                    </tr>
+                                    <tr>
+                                        <td>American curriculum</td>
+                                        <td>Minimum overall average of 80%</td>
+                                        <td>EMSAT 600 or Zero-Credit Basic Arabic Language Course (Pass BUiD Arabic Language Placement Test)</td>
+                                        <td>EmSAT Math score 900 or SAT score 480</td>
+                                        <td>EmSAT physics score 800 or SAT score 460</td>
+                                    </tr>
+                                    <tr>
+                                        <td>British curriculum (GCE/IGCSE)</td>
+                                        <td>Total of seven subjects, five at (O level) and two at (AS/A level), with a
+                                            minimum grade of C in all subjects. Arabic Language and Islamic Education are not counted.</td>
+                                        <td>EMSAT 600 or Zero-Credit Basic Arabic Language Course (Pass BUiD Arabic Language Placement Test)</td>
+                                        <td>EmSAT Math score 900 or AS/A Level Minimum D</td>
+                                        <td>EmSAT physics score 800 or AS/A Level Minimum C</td>
+                                    </tr>
+                                    <tr>
+                                            <td colspan="3">EmSAT English 1100 or IELTS 5.0 overall or TOEFL 61 iBT or equivalent.
+                                            All applicants must pass personal interview. For more information please click here: 
+                                            <a class="Eng" href="English Language Requirements.png" target="_blank">English Language Requirements</a></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tab_content tab_3">
+                                <h5 class="hfive">Environment Sciences and Sustainability</h5>
+                                <p class="para">The module introduces the fundamental principles of sustainability including avoidance or minimisation 
+                                    of negative impacts on the environment; conservation and efficient use of natural resources; preservation 
+                                    of cultural patterns; and ecological harmony and respect for biodiversity.</p>
+                                <h5 class="hfive">Introduction to Engineering and Innovation</h5>
+                                <p class="para">This module prepares students for an exciting career in engineering in general as well as giving students 
+                                    an understanding of the different professions and specialisations in Engineering.</p>
+                                <h5 class="hfive">Engineering Economy and Entrepreneurship</h5>
+                                <p class="para">This module introduces methods of economic analysis in engineering, including time value of money, equivalence, 
+                                    economic measures of worth, selection rules for alternatives, income taxes and equipment depreciation, inflation, and uncertainty.</p>
+                                <h5 class="hfive">Introduction to Computers</h5>
+                                <p class="para">The aim of this module is to examine computer systems and learn how they can enhance personal productivity.</p>
+                                <h5 class="hfive">Physics I</h5>
+                                <p class="para">A study of university entry-level physics including the following topics: kinematics in one, two, and three -dimensions; 
+                                    dynamics; work; energy and conservation of momentum; rotational motion; and equilibrium of rigid bodies.</p>
+                            </div>
+                            <div class="tab_content tab_4">
+                                <table class="table_4">
+                                    <thead>
+                                    <tr>
+                                        <th rowspan="2">Year</th>
+                                        <th colspan="1">Term 1</th>
+                                        <th></th>
+                                        <th colspan="1">Term 2</th>
+                                        <th></th>
+                                        <th colspan="1">Term 3</th>
+                                        <th></th>
+                                        <th>Total</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr rowspan="2">
+                                        <td></td>
+                                        <td>Module Name</td>
+                                        <td>#<br>Cr</td>
+                                        <td>Module Name</td>
+                                        <td>#<br>Cr</td>
+                                        <td>Module Name</td>
+                                        <td>#<br>Cr</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="6">1</td>
+                                        <tr>
+                                            <td>Genral Mathematics</td>
+                                            <td>0</td>
+                                            <td>Calculus 1</td>
+                                            <td>10</td>
+                                            <td>Engineering Economy and Entrepreneurship</td>
+                                            <td>10</td>
+                                            <td rowspan="5">120</td>
+                                        </tr>
+                                        <tr>
+                                            <td>English 1</td>
+                                            <td>10</td>
+                                            <td>Introduction to Engineering and Innovation</td>
+                                            <td>10</td>
+                                            <td>Statistics</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Introduction to Computers</td>
+                                            <td>10</td>
+                                            <td>CADD</td>
+                                            <td>10</td>
+                                            <td>Calculus II</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Environment Sciences and Sustainability</td>
+                                            <td>10</td>
+                                            <td>English 2</td>
+                                            <td>10</td>
+                                            <td>Elective (Islamic Studies)</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Physics 1</td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="5">2</td>
+                                        <tr>
+                                            <td>Chemistry I</td>
+                                            <td>10</td>
+                                            <td>Manufacturing Processes</td>
+                                            <td>10</td>
+                                            <td>Programming for Engineering (MATLAB)</td>
+                                            <td>10</td>
+                                            <td rowspan="5">120</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Linear Algebra</td>
+                                            <td>10</td>
+                                            <td>Engineering Mechanics</td>
+                                            <td>10</td>
+                                            <td>Electrical Engineering II</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Physics II</td>
+                                            <td>10</td>
+                                            <td>Differential Equations</td>
+                                            <td>10</td>
+                                            <td>Thermofluid Sciences I</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Material Science and Metallurgy</td>
+                                            <td>10</td>
+                                            <td>Electrical Engineering I</td>
+                                            <td>10</td>
+                                            <td>Mechanics of Materials</td>
+                                            <td>10</td>
+                                        </tr>
+                                    </tr>
+                                    <tr></tr>
+                                    <tr>
+                                        <td rowspan="6">3</td>
+                                        <tr>
+                                            <td>Advanced Applied Maths</td>
+                                            <td>10</td>
+                                            <td>Applied Numerical Methods for Engineers</td>
+                                            <td>10</td>
+                                            <td>Machine Element Design</td>
+                                            <td>10</td>
+                                            <td rowspan="5">120</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Engineering Management</td>
+                                            <td>10</td>
+                                            <td>Thermofluid Sciences III</td>
+                                            <td>10</td>
+                                            <td>Introduction to Digital Electronics</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Thermofluid Sciences II</td>
+                                            <td>10</td>
+                                            <td>Machine Theory and Dynamics</td>
+                                            <td>10</td>
+                                            <td>Human Factors and Safety Engineering</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Electrical Machines</td>
+                                            <td>10</td>
+                                            <td>Electrical Power Devices</td>
+                                            <td>10</td>
+                                            <td>Sensors and Instrumentation</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5">16 weeks Internship</td>
+                                            <td>10</td>
+                                        </tr>
+                                    </tr>
+                                    <tr></tr>
+                                    <tr>
+                                        <td rowspan="6">4</td>
+                                        <tr>
+                                            <td>Final Year Project</td>
+                                            <td>10</td>
+                                            <td>Final Year Project</td>
+                                            <td>10</td>
+                                            <td>Final Year Project</td>
+                                            <td>10</td>
+                                            <td rowspan="5">110</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Systems and Control Engineering</td>
+                                            <td>10</td>
+                                            <td>Electro-mechanical Design</td>
+                                            <td>10</td>
+                                            <td>Maintenance and System monitoring</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Elective (Arts and Humanities)</td>
+                                            <td>10</td>
+                                            <td>Elective (Social or Behavioural sciences)</td>
+                                            <td>10</td>
+                                            <td>Elective Module V</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Elective Module I</td>
+                                            <td>10</td>
+                                            <td>Elective Module III</td>
+                                            <td>10</td>
+                                            <td>Elective Module VI</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Elective Module II</td>
+                                            <td>10</td>
+                                            <td>Elective Module IV</td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tr>
+                                </tbody>
+                                </table>
+                            </div>
+                            <div class="tab_content tab_5">
+                                <ul>
+                                    <li class="LI">HAWK does not normally award credit for experiential learning.</li>
+                                    <li class="LI">HAWK does consider credit transfer arrangements towards their undergraduate programmes from other higher education institutions subject to the following conditions.</li>
+                                    <li class="LI">The applicant meets HAWK’s formal entry requirements.</li>
+                                    <li class="LI">The relevant Faculty is able to determine that the coursework was taken at undergraduate level and is at least equivalent to the credit rating available for one module of the programme for which the credit transfer is being considered.</li>
+                                    <li class="LI">The student attained a minimum GPA of 2.0 on a 4.0 scale or equivalent for the credit of a module to be transferred.</li>
+                                    <li class="LI">The institution at which the programme was taken is recognised by the Ministry of Education or licensed or officially recognised by the Department/Ministry of Education in the home country (and so attestable by the Ministry of Education)</li>
+                                    <li class="LI">The Faculty only allows exemptions from modules with content equivalent to that qualification providing the transferable points.</li>
+                                    <li class="LI">Credit points can only be transferred where the work done for the previous qualification would allow the student to successfully perform the assessment exercise for the exempted module.</li>
+                                    <li class="LI">The decision as to whether a previously taken qualification or credit accumulation serves to exempt a student from a current module rests with the Board of Examiners on the recommendation of the Dean of the Faculty.</li>
+                                    <li class="LI">Credits which have already formed part of an award are not acceptable for transfer.</li>
+                                    <li class="LI">Credit transfer will not be awarded for study completed as part of a credit-bearing programme of continuing education.</li>
+                            </ul>
+                            </div>
+                            <div class="tab_content tab_6">
+                                <h5 class="scholar">Scholarships up to 50% - for more details visit scholarships</h5>
+                                <br>
+                                <table class="table_6">
+                                    <thead>
+                                    <tr>
+                                        <th>Bachelor Programme</th>
+                                        <th>Tuition fees per year</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>BSc Computer Science - Artifical Intelligence</td>
+                                        <td>£ 20000</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="right-side">
+                    <h3>This course includes:</h3>
+                    <p><i class="fa-regular fa-clock"></i> 10 credit hours</p>
+                    <p><i class="fa-solid fa-floppy-disk"></i> Downloadable resources</p>
+                    <p><i class="fa-regular fa-calendar-xmark"></i> Full access till end of course</p>
+                    <p><i class="fa-solid fa-rectangle-list"></i> Assignments and projects</p>
+                    <p><i class="fa-brands fa-square-gitlab"></i> Practicals</p>
+                    <p><i class="fa-solid fa-note-sticky"></i> Quizzes and Exams</p>
+                    <p><i class="fa-solid fa-star"></i> Certificate of completion</p>
+                    <div class="enroll-btn">
+                        <a class="enrolling" href="#"> Enroll Course</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
