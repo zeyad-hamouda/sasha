@@ -1,0 +1,60 @@
+.circle {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    border-radius: 50%;
+    background: rgba(175, 201, 174);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 66px;
+    margin-top: 66px;
+}
+.LL {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: -60px;
+}
+.logo {
+    color: #000000;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: left;
+    margin-top: 17px;
+    margin-left: 40px;
+}
+h2 span {
+    color: black;
+}
+.textt {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    animation: rotateText 10s linear infinite;
+}
+@keyframes rotateText {
+    0% {
+        transform: rotate(360deg) ;
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+.textt span {
+    position: absolute;
+    left: 35%;
+    font-size: 14px;
+    transform-origin: 0 70px;
+    margin-top: -65px;
+    margin-left: 2px;
+    color: black;
+}
+p {
+    position: absolute;
+    margin-right: 73px;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
